@@ -1,0 +1,33 @@
+Lista é uma estrutura de dados:
+ - Homogênea (do mesmo tipo)
+ - Ordenada (elementos acessados por meio de posicões)
+ - Inicia vazia e seus elementos são alocados sob demanda
+ - Cada elemento ocupa umm nó (ou nodo) da lista
+
+Tipo (interface): List
+
+Classes que implementam: ArrayList, LinkedList, etc.
+
+Vantagens:
+ - Tamanho variável
+ - Facilidade para se realizar insercões e delecões
+
+Desvantagens:
+ - Acesso sequencial aos elementos
+ -----------------------------------------------------------------------------------------------------------------------
+ DEMO
+
+ - Tamanho da Lista : size()
+
+ - Inserir elemento na lista: add(obj), add(int, obj)
+
+ - Remover elementos da lista: remove(obj), remove(int), removeIf(Predicate)
+
+ - Encontrar posicao de elemento: indexOf(obj), lastIndexOf(obj)
+
+ - Filtrar lista com base em predicado:
+    List<Integer> result = list.stream().filter(x -> x > 4).collect(Collectors.toList());
+
+ - Encontrar primeira ocorrência com base em predicado:
+    Integer result = list.stream().filter(x -> x > 4).findFirst().orElse(null);
+

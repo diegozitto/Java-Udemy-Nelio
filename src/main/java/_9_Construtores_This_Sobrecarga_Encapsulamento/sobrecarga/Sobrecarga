@@ -1,0 +1,31 @@
+É um recurso que uma classe possui de oferecer mais de uma
+operacão com o mesmo nome, porém com diferentes listas de
+parâmetros.
+
+Nota: é possível também incluir um construtor padrão
+
+Ex: Construtores diferentes na mesma classe
+
+(...)
+
+public class Produto {
+
+    public String nome;
+    public double preco;
+    public int quantidade;
+
+ public Produto(String nome, double preco, int quantidade){
+        this.nome = nome;
+        this.preco = preco;
+        this.quantidade = quantidade;
+    }
+
+ public Produto(String nome, double preco){
+         this.nome = nome;
+         this.preco = preco;
+    }
+
+ public Produto(){
+     }
+
+(...)

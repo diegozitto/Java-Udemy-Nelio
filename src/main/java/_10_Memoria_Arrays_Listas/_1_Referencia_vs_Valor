@@ -1,0 +1,110 @@
+1. Classes são tipos referência
+ - Variáveis cujo tipo são classes não devem ser entendidas como caixas, mas
+ sim "tentáculos" (ponteiros) para caixas.
+
+ Ex:
+
+ Product p1, p2;
+
+                 Memória
+  ------------------------------------
+ |      STACK      |       HEAP       |
+ |        p1       |                  |
+ |        p2       |                  |
+ |                 |                  |
+ |                 |                  |
+  ------------------------------------
+
+  STACK: área da memória que aloca as variáveis declaradas no programa
+  STACK: área da memória que aloca os objetos em tempo de execucão
+
+  p1 = new Product("TV",900.00,0);
+
+                  Memória
+    ------------------------------------------------
+   |      STACK      |       HEAP                   |
+   |  p1 = 0x100358  | 0x100358 = TV | 900 | 0      |
+   |        p2       |                              |
+   |                 |                              |
+   |                 |                              |
+    ------------------------------------------------
+
+ p2 = p1; [p2 passa a apontar para onde p1 aponta]
+ 0x100358 --> é o endereco na memória que agrupa as informacoes da variável
+
+                   Memória
+     ------------------------------------------------
+    |      STACK      |            HEAP              |
+    |  p1 = 0x100358 ----> 0x100358 = TV | 900 | 0   |
+    |  p2 = 0x100358 __/                             |
+    |                 |                              |
+    |                 |                              |
+     ------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+2. Valor "null"
+- Tipos referência aceitam o valor "null", que indica que a variável aponta
+para ninguém
+
+ Product p1, p2;
+ p1 = new Product("TV",900.00,0);
+ p2 = null
+                        Memória
+     ------------------------------------------------
+    |      STACK      |            HEAP              |
+    |  p1 = 0x100358 ----> 0x100358 = TV | 900 | 0   |
+    |       p2 = X    |                              |
+    |                 |                              |
+    |                 |                              |
+     ------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+3. Tipos primitivos
+- Variáveis são tipos valor. Tipos valor são CAIXAS e não ponteiros.
+
+double x,y;
+x = 10;
+y = x;
+(y recebe uma cópia de x, valor de X será copiado para o Y)
+                Memória
+  ------------------------------------
+ |      STACK      |       HEAP       |
+ |      x [10]     |                  |
+ |      y [10]     |                  |
+ |                 |                  |
+ |                 |                  |
+  ------------------------------------
+
+- Inicializcão
+
+int p;
+System.out.println(p); [variável não inicializada]
+
+p = 10;
+System.out.println(p); [variável inicializada -- print 10]
+
+
+- Valores padrão
+Quando alocamos (new) qualquer tipo estruturado (classe ou array), são atibuídos valores
+padrão aos seus elemntos
+
+número: 0
+boolean: false
+char: caracter código 0
+objetos: null
+ _________________________________________________________________________________________________
+|__________________CLASSE______________________|_________________PRIMITIVO________________________|
+| Vantagem: usufrui de todos os recursos OO    | Vantagem: é mais simples e mais performático     |
+|----------------------------------------------|--------------------------------------------------|
+| Variáveis são ponteiros                      | Variáveis são caixas                             |
+|----------------------------------------------|--------------------------------------------------|
+| Objetos precisam ser instanciados usando     | Não instancia. Uma vez declarados, estão prontos |
+|  new, ou apontar para um objeto já existente |  para uso                                        |
+|----------------------------------------------|--------------------------------------------------|
+| Aceita valor null                            | Não aceita valor null                            |
+|----------------------------------------------|--------------------------------------------------|
+| Y=X (Y aponta para onde X aponta)            | Y=X (Y recebe uma cópia de X)                    |
+|----------------------------------------------|--------------------------------------------------|
+| Objetos instanciados no HEAP                 | "Objetos" instanciados no stack                  |
+|----------------------------------------------|--------------------------------------------------|
+| Objetos não utilizados são desalocados em um | "Objetos" são desalocados imediatamente quando   |
+|  momento próximo pelo garbage collector      |  seu escopo de execucão é finalizado             |
+|______________________________________________|__________________________________________________|

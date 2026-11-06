@@ -1,0 +1,16 @@
+Design
+
+- Categoria de classes:
+
+ * Views: telas do sistema
+ * Controllers: é o meio de campo entre a tela (Views) e o sistema
+ * Entities: entidades de negócio (produtos, clientes, pedidos, etc)
+ * Services
+ * Repositories: objetos responsáveis por acessar os dados de um banco de dados
+
+ Solução no Youtube + versão web no Spring
+ Olá pessoal, tudo bem?
+
+ Ainda sobre este exercício resolvido 1, nós fizemos uma live no Youtube resolvendo ele com recursos mais recentes do Java, e também fizemos uma versão web do exercício no framework Spring Boot. Vale a pena conferir:
+
+ https://www.youtube.com/live/pBdEiFHrnXI

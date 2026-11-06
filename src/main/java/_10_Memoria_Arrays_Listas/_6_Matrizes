@@ -1,0 +1,22 @@
+MATRIZES
+
+Em programacão, "matriz" é o nome dado a arranjos bidimensionais
+ - ATENCÃO: "vetor de vetores"
+
+Arranjo (array) é uma estrutura de dados:
+ - Homogênea (dados do mesmo tipo)
+ - Ordenada (elementos acessados por meio de posicões)
+ - Alocada de uma vez só, em um bloco contíguo de memória
+
+Vantagens:
+ - Acesso imediato aos elementos pela sua posicão
+
+Desvantagens:
+ - Tamanho fixo
+ - Dificuldade para se realizar insercões e delecões
+
+     __0_____1______2______3__
+  0 | 3.5 | 17.0 | 12.3 | 8.2 |
+  1 | 4.1 | 6.2  | 7.5  | 2.9 |
+  2 |11.0 | 9.5  | 14.8 | 21.7|
+     -------------------------

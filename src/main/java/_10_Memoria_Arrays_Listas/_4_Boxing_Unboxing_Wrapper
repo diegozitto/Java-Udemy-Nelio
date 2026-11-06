@@ -1,0 +1,45 @@
+- Boxing é o processo de conversão de um objeto tipo valor para
+   um tipo referência compatível
+
+ int x = 20;
+
+ Object obj = x;
+                      Memória
+       ------------------------------------------------
+      |      STACK      |            HEAP              |
+      |                 |                              |
+      |   x=20          |         > 20                 |
+      |             obj --------/                      |
+      |                 |                              |
+       ------------------------------------------------
+
+ - Unboxing é o processo de conversão de um objeto tipo referência para
+    um tipo valor
+
+  int x = 20;
+
+  Object obj = x;
+
+  int y = (int) obj;
+                       Memória
+        ------------------------------------------------
+       |      STACK      |            HEAP              |
+       |                 |                              |
+       |   x=20    y=20  |         > 20                 |
+       |             obj --------/                      |
+       |                 |                              |
+        ------------------------------------------------
+
+ Wrapper classes
+
+ - Classes equivalentes aos tipos primitivos:
+
+                   Object
+               ______|_________________
+              |              |         |
+            Number        Boolean | Character
+              |           boolean |  char
+    __________|____________________________
+   |      |       |         |      |       |
+ Byte | Short | Integer | Long | Float | Double
+ byte | short | int     | long | float | double

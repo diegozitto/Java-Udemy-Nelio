@@ -1,0 +1,29 @@
+* Revisão do conceito
+* Declaracão e instanciacão
+* Manipulacão de vetor de elementos tipo valor (primitivo)
+* Manipulacão de vetor de elementos tipo referência (classe)
+* Acesso aos elementos
+* Propriedade length
+------------------------------------------------------------------------------------------------------------------------
+
+Em programação, "vetor" é o nome dado a arranjos unidimensionais (arrays)
+
+Arranjo (array) é uma estrutura de dados:
+    - Homogênea (dados do mesmo tipo)
+    - Ordenada (elementos acessados por meio de posições)
+    - Alocada de uma vez só, em um bloco contíguo de memória
+
+Vantagens:
+    - Acesso imediato aos elementos pela sua posição
+
+Desvantagens:
+    - Tamanho fixo
+    - Dificuldade para se realizar inserções e deleções
+      ______
+    0|_1.72_|
+    1|_1.56_|
+    2|_1.80_|
+
+Ex:
+Fazer um programa para ler um número inteiro N e a altura de N pessoas. Armazene as N alturas em um vetor.
+Em seguida, mostrar a altura média dessas pessoas

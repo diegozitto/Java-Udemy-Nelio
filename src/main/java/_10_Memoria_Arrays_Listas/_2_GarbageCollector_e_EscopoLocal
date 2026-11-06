@@ -1,0 +1,43 @@
+1. Garbage collector
+
+- é um processo que automatiza o gerenciamento de memória de um programa em execucão
+- monitora os objetos alocados dinamicamente pelo programa (no heap), desalocando
+   aqueles que não estão mais sendo utilizados.
+- Desalocacão por garbage collector
+Product p1, p2;
+ p1 = new Product("TV",900.00,0);
+ p2 = new Product("MOUSE",30.00,0);
+ p1=p2;
+                        Memória
+     ------------------------------------------------
+    |      STACK      |            HEAP              |
+    |       p1    -----\       TV | 900 | 0          |
+    |       p2     ------>  MOUSE |  30 | 0          |
+    |                 |                              |
+    |                 |                              |
+     ------------------------------------------------
+
+     TV | 900 | 0 --> será desalocado pelo garbage collector pois perdeu
+                        a sua referência
+
+2. Escopo
+
+ Desalocacão por escopo
+
+ void method1(){
+ int x = 10;
+ if (x > 0){
+    int y = 20;
+    }
+    System.out.println(x);
+ }
+                         Memória
+      ------------------------------------------------
+     |      STACK      |            HEAP              |
+     |  method1 scope  |                              |
+     |   10  |if scope |                              |
+     |    x  |  y      |                              |
+     |                 |                              |
+      ------------------------------------------------
+
+      Y só existe dentro do if e X só existe dentro do método1

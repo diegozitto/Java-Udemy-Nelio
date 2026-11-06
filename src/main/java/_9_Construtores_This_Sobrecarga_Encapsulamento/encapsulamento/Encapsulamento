@@ -1,0 +1,34 @@
+É um princípio que consiste em esconder detalhes de implementacão
+de uma classe, expondo apenas operacões seguras e que mantenham
+os objetos em um estado consistente.
+
+Regra de ouro: o objeto deve sempre estar em um estado consistente, e
+a própria classe deve garantir isso.
+
+Regra geral básica:
+ - Um objeto NÃO deve expor nenhum atributos (modificador de acesso
+  private)
+   -- private --> atributos não podem ser acessados por outros classes
+ - Os atributos dever ser acessados por meio de método get e set
+   -- Padrão JavaBeans: https://en.wikipedia.org/wiki/JavaBeans
+
+Ex:
+
+private String name;
+private double price;
+
+public String getName(){
+    return name;
+}
+
+public void setName(String name){
+    this.name = name;
+}
+
+public double getPrice(){
+    return price;
+}
+
+public void setPrice(double price){
+    this.price = price;
+}
