@@ -1,7 +1,7 @@
-package _12_Enumeracoes_Composicao._1_Enums.exResolvido2.application;
+package _12_Enumeracoes_Composicao.exResolvido2.application;
 
-import _12_Enumeracoes_Composicao._1_Enums.exResolvido2.entities.Comment;
-import _12_Enumeracoes_Composicao._1_Enums.exResolvido2.entities.Post;
+import _12_Enumeracoes_Composicao.exResolvido2.entities.Comment;
+import _12_Enumeracoes_Composicao.exResolvido2.entities.Post;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

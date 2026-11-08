@@ -1,6 +1,6 @@
-package _12_Enumeracoes_Composicao._1_Enums.exResolvido1.entities;
+package _12_Enumeracoes_Composicao.exResolvido1.entities;
 
-import _12_Enumeracoes_Composicao._1_Enums.exResolvido1.entities.enums.WorkerLevel;
+import _12_Enumeracoes_Composicao.exResolvido1.entities.enums.WorkerLevel;
 
 import java.util.ArrayList;
 import java.util.Calendar;

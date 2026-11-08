@@ -1,4 +1,4 @@
-package _12_Enumeracoes_Composicao._1_Enums.exResolvido1.entities;
+package _12_Enumeracoes_Composicao.exResolvido1.entities;
 
 import java.util.Date;
 
