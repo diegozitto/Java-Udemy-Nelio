@@ -1,8 +1,8 @@
 package _13_Heranca_Polimorfismo.exemploHeranca.entities;
 
 public class Account {
-    protected Integer number;
-    protected String holder;
+    private Integer number;
+    private String holder;
     protected Double balance;
 
     public Account() {
@@ -35,7 +35,7 @@ public class Account {
     }
 
     public void withdraw (double amount){
-        balance -= amount;
+        balance -= amount + 5.0;
     }
 
     public void deposit (double amount){

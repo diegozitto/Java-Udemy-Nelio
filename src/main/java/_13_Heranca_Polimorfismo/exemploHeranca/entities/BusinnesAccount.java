@@ -2,7 +2,7 @@ package _13_Heranca_Polimorfismo.exemploHeranca.entities;
 
 public class BusinnesAccount extends Account{
 
-    protected Double loanLimit;
+    private Double loanLimit;
 
     public BusinnesAccount(){
         super();
@@ -27,4 +27,9 @@ public class BusinnesAccount extends Account{
         }
     }
 
+    @Override
+    public void withdraw(double amount) {
+        super.withdraw(amount);
+        balance -= 2.0;
+    }
 }
