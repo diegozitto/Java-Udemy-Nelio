@@ -1,14 +1,14 @@
-package _13_Heranca_Polimorfismo.exemploHeranca.entities;
+package _13_Heranca_Polimorfismo.exAbstrato.classes.entities;
 
-public class BusinnesAccount extends Account{
+public class BusinessAccount extends Account {
 
     private Double loanLimit;
 
-    public BusinnesAccount(){
+    public BusinessAccount(){
         super();
     }
 
-    public BusinnesAccount(Integer number, String holder, Double balance, Double loanLimit) {
+    public BusinessAccount(Integer number, String holder, Double balance, Double loanLimit) {
         super(number, holder, balance);
         this.loanLimit = loanLimit;
     }

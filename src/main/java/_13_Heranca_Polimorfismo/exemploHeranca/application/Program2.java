@@ -1,7 +1,7 @@
 package _13_Heranca_Polimorfismo.exemploHeranca.application;
 
 import _13_Heranca_Polimorfismo.exemploHeranca.entities.Account;
-import _13_Heranca_Polimorfismo.exemploHeranca.entities.BusinnesAccount;
+import _13_Heranca_Polimorfismo.exemploHeranca.entities.BusinessAccount;
 import _13_Heranca_Polimorfismo.exemploHeranca.entities.SavingsAccount;
 
 public class Program2 {
@@ -15,7 +15,7 @@ public class Program2 {
         System.out.println(acc2.getBalance());
 
 
-        Account acc3 = new BusinnesAccount(1003,"Bob", 1000.0,500.0);
+        Account acc3 = new BusinessAccount(1003,"Bob", 1000.0,500.0);
         acc3.withdraw(200.0);
         System.out.println(acc3.getBalance());
     }
